@@ -20,7 +20,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from 'src/user/get-user.decorator';
 import { User } from 'src/user/user.entity';
 
-@Controller('policy')
+@Controller('policies')
 @UseGuards(AuthGuard('basic'))
 @UsePipes(new ValidationPipe({ transform: true }))
 export class PolicyController {
