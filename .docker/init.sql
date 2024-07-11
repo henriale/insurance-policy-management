@@ -1,0 +1,17 @@
+-- Active: 1720549756652@@127.0.0.1@5432@policy_management
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS policies (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  start_date DATE DEFAULT CURRENT_DATE NOT NULL,
+  end_date DATE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users(username, password) VALUES ('carrier', 'pass');
