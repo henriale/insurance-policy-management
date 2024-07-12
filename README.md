@@ -38,3 +38,7 @@ DELETE localhost:3000/policies/1
 ```
 
 or you can import the `api-collection.har` file into Postman or Insomnia
+
+## System Design
+
+the system design description can be found in `./docs` folder

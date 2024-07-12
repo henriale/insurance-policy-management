@@ -36,8 +36,8 @@ export class PolicyController {
   }
 
   @Get()
-  async findAll() {
-    return this.policyService.findAll();
+  async findAll(@GetUser() user: User) {
+    return this.policyService.findAll(user.id);
   }
 
   @Get(':id')

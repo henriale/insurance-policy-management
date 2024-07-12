@@ -22,8 +22,8 @@ export class PolicyService {
     });
   }
 
-  findAll() {
-    return this.policyRepository.find();
+  findAll(userId: User['id']) {
+    return this.policyRepository.findBy({ user_id: userId });
   }
 
   findOne(id: number) {

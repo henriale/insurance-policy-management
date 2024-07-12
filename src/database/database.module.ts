@@ -14,7 +14,6 @@ const databaseProviders = [
         database: 'policy_management',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
-        logging: true,
       });
 
       return dataSource.initialize();
